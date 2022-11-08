@@ -1,6 +1,5 @@
 [
     {
-        "_id": "01",
         "name": "Camera Traps",
         "image": "https://dvyvvujm9h0uq.cloudfront.net/com/articles/1594060409-59005-depositphotos-66708955-xl-2015jpg.jpg",
         "description": [
@@ -24,10 +23,13 @@
         "price": 15.99
     },
     {
-        "_id": "02",
         "name": "Wildlife photography tips & techniques",
         "image": "https://www.secretatlastravel.com/wp-content/uploads/2022/05/Wildlife_Photography_Tips_Chase_Teron-2.jpeg",
-        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "description": [
+            {
+                "description1": "Taking pictures of animals in the outdoors can be an exciting way to experience nature, but it can also be challenging to get really great shots. To capture beautiful images of animals, it first helps to have an understanding of fundamental photography concepts. Once you have the fundamentals down, there are several things you can do to improve your chances of getting that great wildlife shot."
+            }
+        ],
         "others_info": {
             "rating": {
                 "number": 4.6,
@@ -38,10 +40,13 @@
         "price": 25.99
     },
     {
-        "_id": "03",
         "name": "Be a Low Light Master",
         "image": "https://petapixel.com/assets/uploads/2016/06/willbl-night-3-800x533.jpg",
-        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "description": [
+            {
+                "description1": "Knowing the low light characteristics of your camera can make a world of difference in your photos. Shooting with a long lens means you’re often working at the threshold of slow shutter speeds and high ISOs. Knowing the limits is critical. If you don’t, you risk coming home with a card full of blurring images."
+            }
+        ],
         "others_info": {
             "rating": {
                 "number": 4.2,
@@ -52,10 +57,13 @@
         "price": 17.99
     },
     {
-        "_id": "04",
         "name": "Know your camera gear before you travel",
         "image": "https://www.pangolinphoto.com/wp-content/uploads/2020/05/Guest-with-camera-gear-on-safari-in-Botswana-Pangolin-Photo-Safaris-1200x800.webp",
-        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "description": [
+            {
+                "description1": "Knowing your camera and how it works is an essential part of becoming a better wildlife photographer. You need to know where the buttons are and how they work or react to your inputs. You should be able to change a setting without your eye having to leave the viewfinder as that second or two not concentrating on your subject can ultimately be the difference between great shots and missed shots."
+            }
+        ],
         "others_info": {
             "rating": {
                 "number": 4.7,
@@ -66,10 +74,13 @@
         "price": 10.99
     },
     {
-        "_id": "05",
         "name": "Post-processing nature photography",
         "image": "https://becausebirds.com/wp-content/webpc-passthru.php?src=https://becausebirds.com/wp-content/uploads/2013/12/beforeafter.png&nocache=1",
-        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "description": [
+            {
+                "description1": "While your in-camera technique is most important, the ability to post-process your landscape images also plays a role in your final product. Each photographer approaches the digital darkroom in their own way."
+            }
+        ],
         "others_info": {
             "rating": {
                 "number": 4.8,
@@ -80,10 +91,13 @@
         "price": 45.99
     },
     {
-        "_id": "06",
         "name": "How to take photos like a pro",
         "image": "https://i1.wp.com/news.iium.edu.my/wp-content/uploads/2018/11/maxresdefault.jpg?fit=1200%2C675&ssl=1",
-        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "description": [
+            {
+                "description1": "If you want to take your wild photography to the next level, this course help you learn how to take good pictures. Once you get a hang of these basic pro techniques, it should vastly improve your results."
+            }
+        ],
         "others_info": {
             "rating": {
                 "number": 4.2,
