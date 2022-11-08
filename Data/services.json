@@ -1,0 +1,96 @@
+[
+    {
+        "_id": "01",
+        "name": "Camera Traps",
+        "image": "https://dvyvvujm9h0uq.cloudfront.net/com/articles/1594060409-59005-depositphotos-66708955-xl-2015jpg.jpg",
+        "description": [
+            {
+                "description1": "A camera trap is a camera that fires automatically when an animal is detected. A camera trap can be left out for days, weeks or even months at a time. The longer it is left, the greater the probability of it capturing an image of a rare or elusive animal."
+            },
+            {
+                "description2": "In order to obtain decent camera trap images, it is best to use a high-quality DSLR camera. A sensor is used to detect animals and trigger the camera. One or more off-camera flashes can be added to photograph nocturnal creatures. These flashes can be set up to provide dramatic studio-like lighting."
+            },
+            {
+                "description3": "If you have noticed that shooting photos of animals and hunting them has a few things in common, you are correct. Another great technique that’s being used by professionals with wildlife photography jobs is to use camera traps. They set up a video or still camera in a remote location. They then let a motion trigger to start recording. Since the human photographer isn’t around, animals are much more likely to get close and to go on about their normal routine. The “traps” can be left for however long the batteries will last, or the weather will allow. Scientists have used the technique for a while, but lately, it has caught on as the best camera for wildlife photography."
+            }
+        ],
+        "others_info": {
+            "rating": {
+                "number": 4.0,
+                "badge": "Excellent"
+            },
+            "students": "465"
+        },
+        "price": 15.99
+    },
+    {
+        "_id": "02",
+        "name": "Wildlife photography tips & techniques",
+        "image": "https://www.secretatlastravel.com/wp-content/uploads/2022/05/Wildlife_Photography_Tips_Chase_Teron-2.jpeg",
+        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "others_info": {
+            "rating": {
+                "number": 4.6,
+                "badge": "Excellent"
+            },
+            "students": "655"
+        },
+        "price": 25.99
+    },
+    {
+        "_id": "03",
+        "name": "Be a Low Light Master",
+        "image": "https://petapixel.com/assets/uploads/2016/06/willbl-night-3-800x533.jpg",
+        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "others_info": {
+            "rating": {
+                "number": 4.2,
+                "badge": "Excellent"
+            },
+            "students": "853"
+        },
+        "price": 17.99
+    },
+    {
+        "_id": "04",
+        "name": "Know your camera gear before you travel",
+        "image": "https://www.pangolinphoto.com/wp-content/uploads/2020/05/Guest-with-camera-gear-on-safari-in-Botswana-Pangolin-Photo-Safaris-1200x800.webp",
+        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "others_info": {
+            "rating": {
+                "number": 4.7,
+                "badge": "Excellent"
+            },
+            "students": "951"
+        },
+        "price": 10.99
+    },
+    {
+        "_id": "05",
+        "name": "Post-processing nature photography",
+        "image": "https://becausebirds.com/wp-content/webpc-passthru.php?src=https://becausebirds.com/wp-content/uploads/2013/12/beforeafter.png&nocache=1",
+        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "others_info": {
+            "rating": {
+                "number": 4.8,
+                "badge": "Excellent"
+            },
+            "students": "357"
+        },
+        "price": 45.99
+    },
+    {
+        "_id": "06",
+        "name": "How to take photos like a pro",
+        "image": "https://i1.wp.com/news.iium.edu.my/wp-content/uploads/2018/11/maxresdefault.jpg?fit=1200%2C675&ssl=1",
+        "description": "This Python For Beginners Course Teaches You The Python Language Fast.",
+        "others_info": {
+            "rating": {
+                "number": 4.2,
+                "badge": "Excellent"
+            },
+            "students": "258"
+        },
+        "price": 35.99
+    }
+]
