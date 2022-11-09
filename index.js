@@ -4,6 +4,7 @@ require('dotenv').config();
 const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
+const jwt = require('jsonwebtoken');
 
 //* middleware 
 app.use(cors());
@@ -15,12 +16,35 @@ app.get('/', (req, res) => {
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.drjbcpx.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-console.log(uri)
+
+function verifyJWT(req, res, next) {
+    const authHeaders = req.headers.authorization;
+    if (!authHeaders) {
+        return res.status(401).send({ message: 'Unauthorized Access' })
+    }
+    const token = authHeaders.split(' ')[1];
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (err, decoded) {
+        if (err) {
+            return res.status(403).send({ message: 'Forbidden Access' })
+        }
+        req.decoded = decoded
+    })
+    next();
+}
+
 async function run() {
     const servicesCollection = client.db('wildEye').collection('services');
     const reviewsCollection = client.db('wildEye').collection('reviews');
     try {
 
+        //* JWt
+        app.post('/jwt', (req, res) => {
+            const user = req.body;
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+            res.json({ token });
+        })
+
+        //* services APIs
         app.get('/services', async (req, res) => {
             const query = {};
             const cursor = servicesCollection.find(query);
@@ -48,7 +72,7 @@ async function run() {
             res.send(result);
         })
 
-        //* reviews
+        //* reviews APIs
         app.post('/reviews', async (req, res) => {
             const review = req.body;
             const result = await reviewsCollection.insertOne(review);
@@ -63,7 +87,10 @@ async function run() {
             res.send(review);
         })
 
-        app.get('/reviews', async (req, res) => {
+        app.get('/reviews', verifyJWT, async (req, res) => {
+            if (req.decoded.email !== req.query.email) {
+                return res.status(403).send({ message: 'Unauthorized Access' })
+            }
             let query = {};
             if (req.query.email) {
                 query = {
