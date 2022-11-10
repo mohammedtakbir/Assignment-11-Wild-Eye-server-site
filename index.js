@@ -75,7 +75,7 @@ async function run() {
         //* reviews APIs
         app.post('/reviews', async (req, res) => {
             const review = req.body;
-            const result = await reviewsCollection.insertMany(review);
+            const result = await reviewsCollection.insertOne(review);
             res.send(result);
         })
 
@@ -83,7 +83,7 @@ async function run() {
             const id = req.params.id;
             const query = { serviceId: id };
             const cursor = reviewsCollection.find(query);
-            const review = await cursor.toArray();
+            const review = await cursor.sort({_id: - 1}).toArray();
             res.send(review);
         })
 
