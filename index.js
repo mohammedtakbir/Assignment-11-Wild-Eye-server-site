@@ -75,7 +75,7 @@ async function run() {
         //* reviews APIs
         app.post('/reviews', async (req, res) => {
             const review = req.body;
-            const result = await reviewsCollection.insertOne(review);
+            const result = await reviewsCollection.insertMany(review);
             res.send(result);
         })
 
@@ -88,7 +88,8 @@ async function run() {
         })
 
         app.get('/reviews', verifyJWT, async (req, res) => {
-            if (req.decoded.email !== req.query.email) {
+            const decoded = req.decoded
+            if (decoded.email !== req.query.email) {
                 return res.status(403).send({ message: 'Unauthorized Access' })
             }
             let query = {};
@@ -107,6 +108,20 @@ async function run() {
             const query = { _id: ObjectId(id) };
             const result = await reviewsCollection.deleteOne(query);
             res.send(result);
+        })
+
+        app.patch('/reviews/:id', async (req, res) => {
+            const id = req.params.id;
+            const userReview = req.body;
+            const query = { _id: ObjectId(id) };
+            const updatedReview = {
+                $set: {
+                    review: userReview.review
+                }
+            };
+            const result = await reviewsCollection.updateOne(query, updatedReview);
+            res.send(result);
+            console.log(updatedReview);
         })
     }
     finally {
